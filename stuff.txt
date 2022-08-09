@@ -1,0 +1,32 @@
+---------------------------------project create process ---------------------------------
+
+python -m venv VENV                                             (creates venv in curr folder)   
+
+cd VENV\Scripts                                                 (to change to venv Directory when in project folder)
+
+.\activate                                                      (activates venv)   Set-ExecutionPolicy -Scope CurrentUser Unrestricted (incase vs code throws task errors on activate)
+
+pip install django                                              (installs django deps)
+
+cd projectFolder                                               (go back to outside folder so we can create django boilerplate)    
+
+django-admin startproject playground_site                       (creates and installs empty django project in that folder)
+
+cd playground_site                                              (now go to project)
+
+python manage.py migrate                                        (creates sqllite project)
+
+
+python manage.py runserver                                      (runs dev server in browser)
+
+python manage.py startapp pages                                 (doing this in root folder will create a django app template)
+(this has to be added to site settings.py to be recognized)
+
+-----------------------------------some notes-----------------------------------
+MTV process
+MODEL retrieves data from VIEW which applies business logic and formats that data, then sends it to TEMPLATE which renders that data
+this can be done in any order depending on project
+
+apps should be seperate in django, and do one thing each, the whole project should have many apps
+it is good practice to rename the outer folder after creation, so it doesn't have the same name as inner folder (add _root or something)
+-------------------------------------------------
