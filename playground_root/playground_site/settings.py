@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+SECRET_KEY = '*' #temp key for development
 
 # Application definition
 
