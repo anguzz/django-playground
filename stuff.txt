@@ -14,7 +14,7 @@ django-admin startproject playground_site                       (creates and ins
 
 cd playground_site                                              (now go to project)
 
-python manage.py migrate                                        (creates sqllite project)
+python manage.py migrate                                        (creates/migrates sqlite db)
 
 
 python manage.py runserver                                      (runs dev server in browser)
