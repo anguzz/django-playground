@@ -19,8 +19,17 @@ python manage.py migrate                                        (creates sqllite
 
 python manage.py runserver                                      (runs dev server in browser)
 
+----------------------------some more managment stuff---------------------------------
 python manage.py startapp pages                                 (doing this in root folder will create a django app template)
 (this has to be added to site settings.py to be recognized)
+
+
+
+ython manage.py makemigrations pages                            (migrates the model to the database)             
+python manage.py migrate                
+
+python manage.py createsuperuser                                (creates admin for /admin view)
+
 
 -----------------------------------some notes-----------------------------------
 MTV process
