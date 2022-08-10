@@ -1,4 +1,4 @@
-
+@charset "utf-8";
   .welcome-container {
     position: relative;
     max-width: fit-content;
@@ -16,7 +16,7 @@
     margin: 0rem;
     font-weight: 200;
     letter-spacing: -0.03em;
-    color:rgb(191, 229, 252);
+    color:rgb(179, 16, 16);
     line-height: 1.0;
     max-width: 100%;
     padding-left: 1vw;
@@ -29,5 +29,5 @@ margin: 0rem;
 margin-top: 0rem;
 font-weight: 200;
 line-height: 3rem;
-color:rgb(191, 229, 252);
+color:rgb(252, 191, 191);
 }    
