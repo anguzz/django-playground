@@ -1,24 +1,35 @@
 {% load static %}
-<html> 
+<!doctype html>
+<html>
 <head>
-  <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
-  </head>
- 
-  <body>
-    <section id = welcome> 
-        <div class="welcome-container">
-         
-               <h1>
-               <p class="text-1">Hello!</p> <br>
-               </h1>
-               <p class="text-2"> welcome</p> <br>
-               <p class="subtitle">   </p>
-             </div>
-             
-        
-        <div class="background-div"></div>
-        </section>
+<meta charset="utf-8">
+  {% block title %}
+    <title>Untitled Document</title>
+  {% endblock title %}
+<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+  <header id="header">
+   </div>
+   </div>    
+  </header>
+  <aside id="leftsidebar">
+    <nav id="nav">
+    <ul>
+      {% block sidenav %}
+      <li>Menu 1</li><li>Menu 2</li><li>Menu 3</li></ul>
+      {% endblock sidenav %}
+    </nav>
+  </aside>
+  <section id="main">
+    {% block content %}
+      <h1>Welcome!</h1>
+      <p>This is the site template</p>
+      {% endblock content %}  
+  </section>
+  <footer id="footer">Copyright &copy; 2022 Angel Santoyo</footer>
+</div>
+</body>
+</html>
 
-  </body>
-  </html>
-  
