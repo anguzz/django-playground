@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(request):
-    return render(request,'base.html')
+from . models import Page
+
+def index(request, pagename):
+    pagename= '/' + pagename
+    pg = Page.objects.get(permalink=pagename)
+    context={
+        'title':pg.title,
+        'content':pg.content,
+        'last_updated':pg.update_date
+    }
+    return render(request,'pages/page.html', context)
+
 # Create your views here.
  
