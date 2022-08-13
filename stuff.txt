@@ -2,7 +2,7 @@
 
 python -m venv VENV                                             (creates venv in curr folder)   
 
-cd VENV\Scripts                                                 (to change to venv Directory when in project folder)
+cd playground_root\VENV\Scripts                                                (to change to venv Directory when in project folder)
 
 .\activate                                                      (activates venv)   Set-ExecutionPolicy -Scope CurrentUser Unrestricted (incase vs code throws task errors on activate)
 

@@ -11,8 +11,8 @@
 <body>
 <div id="wrapper">
   <header id="header">
-   </div>
-   </div>    
+    
+    <div id="topbanner"><img src="{% static 'top_banner.png' %}" width="100%" height="100%" alt=""/></div>    
   </header>
   <aside id="leftsidebar">
     <nav id="nav">
@@ -20,15 +20,16 @@
       {% block sidenav %}
       <li>Menu 1</li><li>Menu 2</li><li>Menu 3</li></ul>
       {% endblock sidenav %}
+      <li><a href="/contact">Contact</a></li>
     </nav>
   </aside>
   <section id="main">
     {% block content %}
       <h1>Welcome!</h1>
-      <p>This is the site template!</p>
+      <p>This is the site template</p>
       {% endblock content %}  
   </section>
-  <footer id="footer">Copyright &copy; 2022 Angel Santoyo</footer>
+  <footer id="footer">Copyright &copy; 2022 Web Design</footer>
 </div>
 </body>
 </html>

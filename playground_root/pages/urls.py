@@ -1,8 +1,10 @@
-from django.urls import path          #imports path and include function
-from . import views                   #imports local views.py file 
+from django.urls import path
+
+from . import views
 
 urlpatterns = [
-#path('',views.index, name ='index'),  # url dispatcher, path is imported from views.py, then we reference the function index 
-path('', views.index,{'pagename': ''}, name='home'), #gets called  after anything passed to this function
-path('<str:pagename>', views.index, name='index'), #capture everything after domain name and send to view as string
+    # path('', views.index, name='index'),
+    path('', views.index, {'pagename': ''}, name='home'),
+    path('contact', views.contact, name='contact'),
+    path('<str:pagename>', views.index, name='index'),
 ]
